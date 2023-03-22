@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Score Tracker</title>
+    <style>
+        body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h1 {
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      #score {
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+        border: 1px solid black;
+        font-size: 48px;
+        text-align: center;
+        line-height: 100px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Score Tracker</h1>
+    <div id="score">{{ score }}</div>
+  </body>
+</html>
