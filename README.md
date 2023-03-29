@@ -8,4 +8,4 @@ Then, the render_template() function is called to render the "index.html" templa
 
 index.html: displays it.
 
-KEY NOTES: Any updates for app.py file please comment what was changed!
+KEY NOTE: Any updates for app.py file please comment what was changed!
