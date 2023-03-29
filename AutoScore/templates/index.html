@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AutoScore</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        var start_time = Date.now() / 1000;
+        var remaining_time = 30;
+        function updateScore() {
+            $.get('/score', function(data) {
+                $('#distance').text(data.distance.toFixed(2) + ' cm');
+                $('#score').text(data.score);
+                remaining_time = 30 - (Date.now() / 1000 - start_time);
+                if (remaining_time < 0) {
+                    clearInterval(timer_id);
+                    $('body').html('<h1>Time is up!</h1><p>Final score: ' + data.score + '</p>');
+                } else {
+                    $('#timer').text('Time remaining: ' + remaining_time.toFixed(1) + ' s');
+                }
+            });
+        }
+        var timer_id = setInterval(updateScore, 100);
+    </script>
+</head>
+<body>
+    <div id="scoreboard">
+        <h1>AutoScore</h1>
+        <div class="scoreboard-item">
+            <h2>Distance</h2>
+            <p><span id="distance"></span></p>
+        </div>
+        <div class="scoreboard-item">
+            <h2>Score</h2>
+            <p><span id="score"></span></p>
+        </div>
+        <div class="scoreboard-item">
+            <h2 id="timer">Time remaining: 30.0 s</h2>
+        </div>
+    </div>
+</body>
+</html>
