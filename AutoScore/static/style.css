@@ -1,47 +1,58 @@
 body {
-    background-color: white;
-    text-align: center;
+  background-color: #fff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
 }
 
 h1 {
-    font-size: 80px;
-    color: red;
+  font-size: 80px;
+  color: #d71d24;
+  text-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+  letter-spacing: 4px;
+  margin-top: 80px;
+  margin-bottom: 50px;
 }
 
 p {
-    font-size: 60px;
-    color: black;
+  font-size: 60px;
+  color: #333;
 }
 
 .scoreboard {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
 }
 
 .scoreboard-item {
-    margin: 20px;
-    border: 2px solid black;
-    padding: 20px;
-    border-radius: 20px;
+  margin: 20px;
+  border: 2px solid #333;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 0 rgba(0,0,0,0.2);
 }
 
 .scoreboard-item h2 {
-    font-size: 50px;
-    margin-bottom: 10px;
-    color: black;
+  font-size: 50px;
+  margin-bottom: 10px;
+  color: #333;
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
 }
 
 .scoreboard-item p {
-    font-size: 40px;
-    margin: 0;
-    color: black;
+  font-size: 40px;
+  margin: 0;
+  color: #333;
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
 }
 
 #timer {
-    font-size: 30px;
-    margin-top: 20px;
-    color: black;
+  font-size: 30px;
+  margin-top: 20px;
+  color: #333;
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
 }
